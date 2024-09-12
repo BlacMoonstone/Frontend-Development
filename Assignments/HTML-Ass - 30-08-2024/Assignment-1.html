@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8" />
+  <title>My First Webpage</title>
+  <style>
+    body {
+      font-size: small;
+      font-family: 'Times New Roman', Times, serif;
+    }
+    h1 {
+      margin: 0;
+      padding: 40px;
+      text-align: center;
+      color: white;
+      background-color: darkorange;
+    }
+    nav {
+      padding: 10px;
+      text-align: left;
+    }
+    nav a {
+      text-decoration: none;
+      color: #6677e5;
+      padding: 10px 20px;
+      margin: 0 10px;
+      display: inline-block;
+    }
+    p {
+      width: 700px;
+    }
+    .techyjaunt a {
+      color: #6677e5;
+    }
+    table {
+      border-collapse: collapse;
+    }
+    th, td {
+      border: 2px solid black;
+      padding: 9px;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+  <h1>Exploring the World of Anime</h1>
+    <nav>
+    <a href="#favorite-characters">Favorite Characters</a>
+    <a href="#popular-series">Popular Series</a>
+    <a href="#contact-form">Contact Form</a>
+    </nav>
+  <img src="Anime image.jpg" alt="Demon Slayer (Kimetsu no Yaiba)" width="700px" height="400px">
+  <p>Anime is a popular form of animation from Japan known for its vibrant art and compelling storylines. Its diverse genres include fantasy, science fiction, and romance. Notable series like "Naruto," "One Piece," and "Attack on Titan" have captivated millions of fans worldwide, showcasing the unique storytelling and artistic expression that anime brings.</p>
+
+  <div class="techyjaunt">
+    <a href="https://www.techyjaunt.com/" target="_blank">Visit TechyJaunt</a>
+  </div>
+<br><br>
+  <section id="favorite-characters">
+    <h2>Favorite Characters</h2>
+    <ul>
+      <li>Obanai Iguro (Demon Slayer)</li>
+      <li>Eren Yeager (Attack on Titan)</li>
+      <li>Uchiha Itachi (Naruto)</li>
+      <li>Hisoka Morow (Hunter x Hunter)</li>
+    </ul>
+  </section>
+ <br><br>
+  <section id="popular-series">
+    <h2>Popular Series</h2>
+    <table>
+      <thead>
+        <tr>
+          <th>Anime Title</th>
+          <th>Genre</th>
+          <th>Release Year</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Naruto</td>
+          <td>Action, Adventure</td>
+          <td>2002</td>
+        </tr>
+        <tr>
+          <td>Attack on Titan</td>
+          <td>Adventure, Fantasy</td>
+          <td>2013</td>
+        </tr>
+        <tr>
+          <td>Demon Slayer</td>
+          <td>Action, Historical</td>
+          <td>2019</td>
+        </tr>
+        <tr>
+          <td>One Piece</td>
+          <td>Adventure, Fantasy</td>
+          <td>1999</td>
+        </tr>
+      </tbody>
+    </table>
+  </section>
+<br><br>
+  <section id="contact-form">
+    <h2>Contact Form</h2>
+    <form action="/submit-form" method="post">
+      <label for="name">Name:</label>
+      <input type="text" id="name" name="name">
+      <br><br>
+      <label for="email">Email:</label>
+      <input type="email" id="email" name="email">
+      <br><br>
+      <label for="password">Password:</label>
+      <input type="password" id="password" name="password">
+      <br><br>
+      <label for="gender">Gender:</label>
+      <input type="radio" id="male" name="gender" value="male">Male
+      <input type="radio" id="female" name="gender" value="female">Female
+      <br><br>
+      <label for="subscribe">Subscribe:</label>
+      <input type="checkbox" id="subscribe" name="subscribe"> 
+      <label for="subscribe">Yes, I want to subscribe</label>
+      <br><br>
+      <label for="number-of-series">Number of Series:</label>
+      <input type="number" id="number-of-series" name="number-of-series" min="1" max="10000">
+      <br><br>
+      <label for="date">Date:</label>
+      <input type="date" id="date" name="date">
+      <br><br>
+      <label for="message">Message:</label> <br>
+      <textarea id="message" name="message" rows="8" cols="50"></textarea>
+      <br><br>
+      <button type="submit">Submit</button>
+    </form>
+  </section>
+</body>
+</html>
