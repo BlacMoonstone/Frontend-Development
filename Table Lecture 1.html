@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Table Practical</title>
+</head>
+<body>
+    <h2>Basic Table Structure</h2>
+    <table border="1" cellpadding="7" cellspacing="0">
+        <thead>
+            <tr>
+                <th>Anime</th>
+                <th>Genre</th>
+                <th>Episode</th>
+                <th>Aired</th>
+                <th>Rating</th>
+            </tr>
+        </thead>
+        <tr>
+            <td>Naruto</td>
+            <td>Action, Adventure</td>
+            <td>220</td>
+            <td>2002-2007</td>
+            <td>8.3/10</td>
+        </tr>
+        <tr>
+            <td>One Piece</td>
+            <td>Action, Adventure</td>
+            <td>1074+</td>
+            <td>1999-present</td>
+            <td>9.0/10</td>
+        </tr>
+        <tr>
+            <td>Attack on Titan</td>
+            <td>Action, Dark Fantasy</td>
+            <td>87</td>
+            <td>2013-2023</td>
+            <td>9.0/10</td>
+        </tr>
+        <tr>
+            <td>Death Note</td>
+            <td>Psychological, Thriller</td>
+            <td>37</td>
+            <td>2006-2007</td>
+            <td>8.6/10</td>
+        </tr>
+        <tr>
+            <td>Fullmetal Alchemist: Brotherhood</td>
+            <td>Action, Fantasy</td>
+            <td>64</td>
+            <td>2009-2010</td>
+            <td>9.1/10</td>
+        </tr>
+    </table>
+    <br>
+    <h2>Colspan Table</h2>
+    <table border="1", cellpadding="10" cellspacing="0">
+        <tr>
+            <thead>
+                <th>Anime</th>
+                <th colspan="2">Rating</th>
+            </thead>
+        </tr>
+        <tr>
+            <td>Demon Slayer</td>
+            <td>10/10</td>
+            <td>Great!</td>
+        </tr>
+        <tr>
+            <td>Attack on Titan</td>
+            <td>6.5/10</td>
+            <td>Nice</td>
+        </tr>
+        <tr>
+            <td>Spy Family</td>
+            <td>9.7/10</td>
+            <td>Cool!</td>
+        </tr>
+    </table>
+    <br>
+    <h2>Rowspan Table</h2>
+    <table border="1", cellpadding="12" cellspacing="0">
+        <tr>
+            <thead>
+                <th>Anime</th>
+                <th>Breakdown</th>
+            </thead>
+        </tr>
+        <tr>
+            <td rowspan="2">Naruto</td>
+            <td>Naruto</td>
+        </tr>
+        <tr>
+            <td>Naruto Shippuden</td>
+        </tr>
+        <tr>
+            <td rowspan="3">InuYasha</td>
+            <td>InuYasha</td>
+        </tr>
+        <tr>
+            <td>Kanketsu-hen</td>
+        </tr>
+        <tr>
+            <td>Yashahime</td>
+        </tr>
+    </table>
+</body>
+</html>

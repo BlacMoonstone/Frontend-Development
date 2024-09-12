@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Table Lecture 2</title>
+</head>
+<!--beginning of inine CSS styling-->
+<style>
+    table {
+        border-collapse: collapse;
+        margin: 20px 0;
+    }
+    th {
+        border: 1px solid blue;
+    }
+    td {
+        border: 1px solid blue;
+    }
+    tr:hover {
+        background-color: pink;
+    }
+</style>
+<!--end of inline CSS styling-->
+<body>
+ <h2>Styling a Table with Inline CSS</h2> 
+ <table>
+    <!--beginning of table head-->
+    <thead>
+        <tr>
+            <th>Anime</th>
+            <th colspan="2">Genre</th>
+            <th>Episode</th>
+            <th>Aired</th>
+            <th>Rating</th>
+        </tr>
+    </thead>
+    <!--end of table head-->
+    <!--beginning of table body-->
+    <tbody>
+        <tr>
+            <td>Naruto</td>
+            <td>Action</td>
+            <td>Adventure</td>
+            <td>220</td>
+            <td>2002-2007</td>
+            <td>8.3/10</td>
+        </tr>
+        <tr>
+            <td>One Piece</td>
+            <td>Action</td>
+            <td>Adventure</td>
+            <td>1074+</td>
+            <td>1999-present</td>
+            <td>9.0/10</td>
+        </tr>
+        <tr>
+            <td>Attack on Titan</td>
+            <td>Action</td>
+            <td>Dark Fantasy</td>
+            <td>87</td>
+            <td>2013-2023</td>
+            <td>9.0/10</td>
+        </tr>
+        <tr>
+            <td>Death Note</td>
+            <td>Psychological</td>
+            <td>Thriller</td>
+            <td>37</td>
+            <td>2006-2007</td>
+            <td>8.6/10</td>
+        </tr>
+        <tr>
+            <td>Fullmetal Alchemist: Brotherhood</td>
+            <td>Action</td>
+            <td>Fantasy</td>
+            <td>64</td>
+            <td>2009-2010</td>
+            <td>9.1/10</td>
+        </tr>
+    </tbody>
+    <!--end of table body-->
+    <!--beginning of table footer-->
+    <tfoot>
+        <td colspan="6">Anime is wonderful </td>
+    </tfoot>
+    <!--end of table footer-->
+</table>  
+<br>
+<h2>Basic HTML Form</h2>
+<form action="" method="post">
+    <label for="name">Name</label>
+    <input type="text" id="name" name="name">
+    <br><br>
+    <label for="password">Password</label>
+    <input type="password" id="password" name="password">
+    <br><br>
+    <label for="email">Email</label>
+    <input type="email" id="email" name="email">
+    <br><br>
+    <label for="phone number">Phone number</label>
+    <input type="number" id="phone number" name="phone number">
+    <br><br>
+    <label for="date">Date</label>
+    <input type="date" id="date" name="date">
+    <br><br>
+    <label for="gender">Gender</label>
+    <input type="radio" id="male" name="gender" value="male">Male
+    <input type="radio" id="female" name="gender" value="female">Female
+    <br><br>
+    <label for="subscribe">Subscribe</label>
+    <input type="checkbox" id="subscribe" name="subscribe">
+    <br><br>
+    <label for="country">Country:</label>
+    <select id="country" name="country">
+        <option value="usa">USA</option>
+        <option value="uk">UK</option>
+        <option value="canada">Canada</option>
+        <option value="nigeria">Nigeria</option>
+        <option value="other">Other</option>
+    </select>
+    <br><br>
+    <label for="comment">Comments:</label><br>
+    <textarea id="comments" name="comments" rows="4" cols="50"></textarea>
+    <br><br>
+    <input type="submit">
+</form>
+</body>
+</html>
