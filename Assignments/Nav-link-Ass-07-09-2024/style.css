@@ -1,0 +1,26 @@
+body {
+    background-color: mistyrose;
+}
+.responsive-nav {
+    background-color:chocolate;
+    color:white;
+    padding: 20px;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    position: relative;
+}
+#menu {
+    list-style: none;
+    display: flex;
+}
+#menu a {
+    color: white;
+    padding: 5px;
+    
+
+    text-decoration: none;
+}
+.menu-toggle {
+    display: none;
+}
