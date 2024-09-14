@@ -2,24 +2,24 @@ body {
     background-color: mistyrose;
 }
 .responsive-nav {
-    background-color:chocolate;
-    color:white;
-    /*padding give breathing space between text, or in this case, links. It also gives the nsvigation bar its dimensions.*/
+    background-color: chocolate;
+    color: white;
+    /* Padding gives breathing space between text, or in this case, links. It also gives the navigation bar its dimensions. */
     padding: 20px;
-    /*display: flex; introduces flexbox in order to use properties*/
+    /* Display: flex introduces flexbox in order to use properties */
     display: flex;
-    /*justify-content is a flexbox property that aligns text. It has a default value of flex-start*/
+    /* Justify-content is a flexbox property that aligns text. It has a default value of flex-start */
     justify-content: flex-end;
-    /*the align-items makes sure the text is in the center vertically*/
+    /* Align-items makes sure the text is in the center vertically */
     align-items: center;
     position: relative;
 }
 #logo {
-    /*the position property in combination with the top and left property places the logo at the top left corner of the page*/
+    /* The position property in combination with the top and left property places the logo at the top left corner of the page */
     position: absolute;
     top: 0%;
     left: 0%;
-    /*the max-height and width ensures the logo does not exceed the dimensions of the nav bar*/
+    /* The max-height and width ensure the logo does not exceed the dimensions of the nav bar */
     max-height: 100%;
     max-width: 100%;
 }
@@ -30,24 +30,25 @@ body {
 #menu a {
     color: white;
     padding: 7px;
-    /*text-decoration removes all decorations in the targeted text. In this cae, it removes the line under a link*/
+    /* Text-decoration removes all decorations in the targeted text. In this case, it removes the line under a link */
     text-decoration: none;
 }
 .menu-toggle {
     display: none;
 }
 
-/*this is one of the css properties that can be used to achieve responsiveness for different screen sizes. all rules under the @media property will apply.*/
+/* This is one of the CSS properties that can be used to achieve responsiveness for different screen sizes. All rules under the @media property will apply. */
 @media (max-width: 768px) {
-    /*the menu-toggle will be visible when the screen width is 768px and downwards. If it is more than 768px, the menu-toggle will not be visible*/
+    /* The menu-toggle will be visible when the screen width is 768px and downwards. If it is more than 768px, the menu-toggle will not be visible */
     .menu-toggle {
         display: block;
     }
-    /*the menu will be visible when the screen width is 768px and downwards. If it is more than 768px, the menu will not be visible.*/
+    /* The menu will be hidden when the screen width is 768px and downwards. If it is more than 768px, the menu will be visible. */
     #menu {
         display: none;
     }
-    menu.show {
+    /* This rule is to show the menu when the .show class is added */
+    #menu.show {
         display: flex;
     }
 }

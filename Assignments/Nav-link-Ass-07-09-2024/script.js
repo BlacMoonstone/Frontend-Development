@@ -1,29 +1,46 @@
-/*Initialising variables: there are 3 ways to initialise variabes: let, constant, and bar(traditional, and rarely used). const is used to initialise variables that we don't want the values to change.*/
-//this code targets the html element with the id=menu, i.e. the ul//
+// Initializing variables using the const method. This is used when we don't want the value of the variable to change.
 const menu = document.getElementById('menu');
+const togglebutton = document.getElementById('menu-toggle');
+const menuitems = document.querySelectorAll('#menu a');
 
-//this code targets the menu-toggle button/icon//
-const togglebutton = document.querySelector('menu-toggle');
-
-//this targets the 'anchor' tags under the menu. This is done because the 'anchor' tags do not have a class or id//
-const menuitems = document.querySelectorAll('menu a');
-
-//this controls the menu visibilty when the toggle button is clicked//
+// Function to control menu visibility
 function togglemenu() {
-    menu.classList.toggle('show')
-    
+    menu.classList.toggle('show');
 
-    if(menu.classList.contains('show')) {
-        togglebutton.setAttribute('aria-expanded', 'true')
-        togglebutton.innerHTML = '&times;'; //replace with "x" icon//
+    if (menu.classList.contains('show')) {
+        togglebutton.setAttribute('aria-expanded', 'true');
+        togglebutton.innerHTML = '&times;'; // Replace with "x" icon
 
-        //this code targets the first menu item (the Home)//
-        const firstmenuitem = menu.queryselector('a');
+        const firstmenuitem = menu.querySelector('a');
         if (firstmenuitem) {
             firstmenuitem.focus();
-        } else {
-            togglebutton.setAttribute('aria expanded', 'false')
-            togglebutton.innerHTML = '&#9776;'; //replace with 'menu' icon//
         }
+    } else {
+        togglebutton.setAttribute('aria-expanded', 'false');
+        togglebutton.innerHTML = '&#9776;'; // Replace with 'menu' icon
     }
+
+    // Keyboard navigation control
+    document.addEventListener('keydown', (event) => {
+        const activeElement = document.activeElement;
+        if (activeElement && activeElement.getAttribute('role') === 'menuitem') {
+            const currentIndex = Array.prototype.indexOf.call(menuitems, activeElement);
+            if (event.key === 'ArrowDown') {
+                const nextIndex = (currentIndex + 1) % menuitems.length;
+                menuitems[nextIndex].focus();
+                event.preventDefault();
+            } else if (event.key === 'ArrowUp') {
+                const prevIndex = (currentIndex - 1 + menuitems.length) % menuitems.length;
+                menuitems[prevIndex].focus();
+                event.preventDefault();
+            } else if (event.key === 'Escape') {
+                if (menu.classList.contains('show')) {
+                    menu.classList.remove('show');
+                    togglebutton.setAttribute('aria-expanded', 'false');
+                    togglebutton.innerHTML = '&#9776;';
+                    togglebutton.focus(); // Focus back on the toggle button
+                }
+            }
+        }
+    });
 }
